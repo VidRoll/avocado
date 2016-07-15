@@ -15,6 +15,7 @@ The Avocado judge contract is in `contracts/StateChannels.sol`. There is also of
 The logic for the offchain code is in `offchain/logic.js`. Reading this file will tell you everything you need to know about how the offchain code works. Some functions in this file are meant to be called by user, or another application calling avocado. Others are meant to be called by the counterparty. In `offchain/servers`, there are two files, `peer.js`, and `caller.js`. `caller.js` serves up an http api which can be called by other applications controlled by the user of the channel. For instance, a visual interface or a higher level application, such as one implementing the offchain code to make updates to a payment channel. `peer.js` provides an api that the peers use to propose new channels, or updates to the state of an existing channel.
 
 ## Usage:
+- Make sure testrpc is running first : https://github.com/ethereumjs/testrpc
 - Run `npm start` to start a state channel server.
 - Then give it commands with `npm run cli`.
 - For example, you can try `npm run cli test_cli`.
